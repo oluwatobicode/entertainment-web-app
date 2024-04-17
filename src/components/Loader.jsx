@@ -5,7 +5,7 @@ hourglass.register();
 
 function Loader() {
   return (
-    <div className="loader">
+    <div>
       <l-hourglass
         size="40"
         bg-opacity="0.1"
