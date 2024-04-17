@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { MoviesContext } from "./contexts/MoviesContext";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import TvSeries from "./pages/TvSeries";
+import BookMarked from "./pages/BookMarked";
+import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <MoviesContext>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" index element={<Home />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="series" element={<TvSeries />} />
+          <Route path="bookmarked" element={<BookMarked />} />
+        </Routes>
+      </BrowserRouter>
+    </MoviesContext>
+  );
 }
 
-export default App
+export default App;
