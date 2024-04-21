@@ -1,10 +1,14 @@
-import MovieBox from "../components/MovieBox";
+import Search from "../components/Search";
+import TrendingBox from "../components/TrendingBox";
+import Loader from "../components/Loader";
+import { useMovies } from "../contexts/MoviesContext";
 
 function Home() {
+  const { isLoading } = useMovies();
   return (
-    <div>
-      <h2>Home</h2>
-      <MovieBox />
+    <div className="home">
+      <Search message="Search for movies or TV series" />
+      {isLoading ? <Loader /> : <TrendingBox />}
     </div>
   );
 }

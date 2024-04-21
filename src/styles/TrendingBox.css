@@ -1,0 +1,105 @@
+.intro {
+  margin-top: 1rem;
+}
+
+.intro > h1 {
+  color: var(---color5--);
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.trending-section {
+  margin-top: 1rem;
+  gap: 25px;
+  display: inline-flex;
+}
+
+.trending {
+  width: 450px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.trending-scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.trending-image {
+  width: 450px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.movie-desc {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.bookmark-icon {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.225);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-desc-item {
+  font-size: 16px;
+  font-weight: 100;
+  color: var(---color5--);
+  mix-blend-mode: hard-light;
+  display: flex;
+  gap: 25px;
+}
+
+.movie-desc-item > li:first-child {
+  list-style: none;
+}
+
+.movie-desc > h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(---color5--);
+}
+
+.play-trending {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  display: none;
+}
+
+.play-button-trending {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100px;
+  height: 50px;
+  color: var(---color5--);
+  border-radius: 20px;
+  background-color: #979797;
+  mix-blend-mode: hard-light;
+}
+
+.trending:hover > .play-trending {
+  display: block;
+  transition: ease-in-out;
+}
+
+.trending-image:hover {
+  opacity: 50%;
+}

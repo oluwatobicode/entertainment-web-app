@@ -1,11 +1,12 @@
 import "ldrs/ring";
 import { hourglass } from "ldrs";
+import "../styles/Loader.css";
 
 hourglass.register();
 
 function Loader() {
   return (
-    <div>
+    <div className="loader-container">
       <l-hourglass
         size="40"
         bg-opacity="0.1"

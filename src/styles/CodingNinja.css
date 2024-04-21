@@ -1,0 +1,16 @@
+.coding-ninja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.me {
+  color: var(---color5--);
+  text-decoration: none;
+  text-decoration: 16px;
+}
+
+.me:hover {
+  color: var(---color3--);
+}

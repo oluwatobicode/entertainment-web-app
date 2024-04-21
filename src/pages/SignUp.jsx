@@ -1,7 +1,9 @@
+import Search from "../components/Search";
+
 function SignUp() {
   return (
     <div>
-      <h1>Sign UP</h1>
+      <Search />
     </div>
   );
 }

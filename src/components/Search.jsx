@@ -1,11 +1,21 @@
-function Search() {
+/* eslint-disable react/prop-types */
+import "../styles/search.css";
+import { useMovies } from "../contexts/MoviesContext";
+
+function Search({ message }) {
+  const { search, setSearch } = useMovies();
+
   return (
-    <div>
+    <div className="search">
+      <div className="search-icon">
+        <img src="assets/icon-search.svg" alt="search-icon" />
+      </div>
       <input
-        value="s"
-        placeholder="search"
+        className="search-bar"
+        value={search}
+        placeholder={message}
         onChange={(e) => {
-          console.log(e.target.value);
+          setSearch(e.target.value);
         }}
       />
     </div>
