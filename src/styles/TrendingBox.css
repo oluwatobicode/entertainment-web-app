@@ -47,7 +47,21 @@
   height: 40px;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.225);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
 
+.bookmark-icon-trending {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.225);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,4 +116,35 @@
 
 .trending-image:hover {
   opacity: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  .trending-image {
+    width: 240px;
+    height: 140px;
+  }
+
+  .trending {
+    width: 240px;
+    height: 140px;
+  }
+
+  .bookmark-icon-trending {
+    right: 5%;
+  }
+
+  .play-button-trending {
+    width: 100px;
+    height: 45px;
+  }
+
+  .movie-desc > h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(---color5--);
+  }
+
+  .movie-desc-item {
+    font-size: 13px;
+  }
 }

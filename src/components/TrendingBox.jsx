@@ -41,7 +41,7 @@ function TrendingBox() {
               </div>
 
               <button
-                className="bookmark-icon"
+                className="bookmark-icon-trending"
                 onClick={() => onAddBookMark(el.id)}
               >
                 {el.isBookmarked === false ? (

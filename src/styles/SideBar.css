@@ -9,6 +9,7 @@
 .side-nav {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 25px;
   height: 100%;
@@ -18,6 +19,7 @@
 .bar {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -50,4 +52,41 @@
 
 .active .svg-icon {
   fill: var(---color5--);
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    height: 100px;
+  }
+
+  .side-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .list-icons {
+    flex-direction: row;
+    margin-bottom: unset;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logo {
+    margin-top: unset;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .avatar-img {
+    margin-bottom: unset;
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
 }

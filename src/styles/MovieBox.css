@@ -77,3 +77,57 @@
 .regular-movie-thumbnail:hover {
   opacity: 50%;
 }
+
+@media screen and (max-width: 2560px) {
+  .all-movies {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 1074px) {
+  .all-movies {
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .regular-movies {
+    width: 280px;
+  }
+
+  .regular-movies-image {
+    width: 280px;
+  }
+
+  .all {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .all-movies {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .regular-movies {
+    width: 280px;
+  }
+
+  .regular-movies-image {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .regular-movies {
+    width: 250px;
+  }
+
+  .regular-movies-image {
+    width: 250px;
+  }
+}
